@@ -1,0 +1,243 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: Vazir, sans-serif;
+  --font-vazir-fa: Vazir;
+
+  --animate-fade-in: fadeIn 0.6s ease-out forwards;
+  --animate-slide-in: slideIn 0.6s ease-out forwards;
+  --animate-scale-in: scaleIn 0.6s ease-out forwards;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes scaleIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Vazir', sans-serif;
+}
+
+/* Enhanced Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30%, -50%) scale(1.1);
+  }
+  66% {
+    transform: translate(-20%, 20%) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Entrance Animations */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* RTL Support */
+[dir="rtl"] .rtl\:space-x-reverse > * + * {
+  --tw-space-x-reverse: 1;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  .mobile-menu-enter {
+    transform: translateY(100%);
+  }
+  
+  .mobile-menu-enter-active {
+    transform: translateY(0%);
+    transition: transform 300ms ease-in-out;
+  }
+  
+  .mobile-menu-exit {
+    transform: translateY(0%);
+  }
+  
+  .mobile-menu-exit-active {
+    transform: translateY(100%);
+    transition: transform 300ms ease-in-out;
+  }
+}
+
+/* Smooth Hover Transitions */
+.hover-lift {
+  transition: transform 0.2s ease-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Animations */
+.button-hover {
+  transition: all 0.3s ease-out;
+}
+
+.button-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.grid-background {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.downbtn{
+  display: inline-flex;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 9rem;
+    animation: 1s downbtnA infinite alternate; 
+}
+
+@keyframes downbtnA {
+  0%{
+    translate: 0 0px;
+  }
+  100%{
+    translate: 0 10px;
+  }
+}
