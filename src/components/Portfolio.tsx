@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import ILang from "./ILang";
-import ai from "../assets/ai-lab.png";
-import  asgari from "../assets/asgari.png";
-import park from "../assets/park.png";
-import store from "../assets/parsaStore.png";
-import sepan from "../assets/sepan.png";
-import todo from "../assets/Todo.png";
-import makanbama from "../assets/makanbama.png";
+import ai from "../assets/ai-lab.webp";
+import  asgari from "../assets/asgari.webp";
+import park from "../assets/park.webp";
+import store from "../assets/parsaStore.webp";
+import sepan from "../assets/sepan.webp";
+import todo from "../assets/Todo.webp";
+import makanbama from "../assets/makanbama.webp";
 
 const Portfolio: React.FC<ILang> = ({ lang }) => {
   const content = {
@@ -153,7 +153,7 @@ const Portfolio: React.FC<ILang> = ({ lang }) => {
             >
               {content[lang].projects.map((project, index) => (
                 <div key={index} className="w-full shrink-0">
-                  <div className="relative group">
+                  <a className="relative group" href={project.link} target='_blank'>
                     <img src={project.image} alt={project.title} className="w-full aspect-video object-cover" />
                     <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8">
                       <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
@@ -170,7 +170,7 @@ const Portfolio: React.FC<ILang> = ({ lang }) => {
                         <ExternalLink size={16} />
                       </a>
                     </div>
-                  </div>
+                  </a>
                 </div>
               ))}
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Send, Mail, Phone, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, Linkedin, Instagram, Github } from 'lucide-react';
+import FormP from './formP';
 
 interface ContactProps {
   lang: 'en' | 'fa';
@@ -29,6 +30,8 @@ const Contact: React.FC<ContactProps> = ({ lang }) => {
     }
   };
 
+  
+
   return (
     <section id="contact" className="py-20">
       <div className="max-w-4xl mx-auto">
@@ -54,66 +57,21 @@ const Contact: React.FC<ContactProps> = ({ lang }) => {
             <div className="bg-slate-800/50 backdrop-blur-xs p-6 rounded-xl">
               <h3 className="text-xl font-semibold mb-4">{content[lang].socialMedia}</h3>
               <div className="flex gap-4">
-                <a href="https://linkedin.com/in/parsaalavi" target="_blank" rel="noopener noreferrer" className="bg-slate-700/50 p-3 rounded-full text-slate-400 hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/parsa-alavi-7b126a33b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" className="bg-slate-700/50 p-3 rounded-full text-slate-400 hover:text-white transition-colors">
                   <Linkedin size={24} />
                 </a>
                 <a href="https://instagram.com/parsaalavi.ir" target="_blank" rel="noopener noreferrer" className="bg-slate-700/50 p-3 rounded-full text-slate-400 hover:text-white transition-colors">
                   <Instagram size={24} />
+                </a>
+                <a href="https://github.com/parsa-ai" target="_blank" rel="noopener noreferrer" className="bg-slate-700/50 p-3 rounded-full text-slate-400 hover:text-white transition-colors">
+                <Github size={24} />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <form className="bg-slate-800/50 backdrop-blur-xs p-6 rounded-xl space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-2">
-                {content[lang].name}
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2 focus:outline-hidden focus:border-white transition-colors"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2">
-                {content[lang].email}
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2 focus:outline-hidden focus:border-white transition-colors"
-              />
-            </div>
-            <div>
-              <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                {content[lang].subject}
-              </label>
-              <input
-                type="text"
-                id="subject"
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2 focus:outline-hidden focus:border-white transition-colors"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2">
-                {content[lang].message}
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2 focus:outline-hidden focus:border-white transition-colors"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full button-hover inline-flex items-center justify-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-full font-medium hover:bg-slate-200 transition-colors"
-            >
-              {content[lang].send}
-              <Send size={20} />
-            </button>
-          </form>
+          <FormP lang={lang} ></FormP>
         </div>
       </div>
     </section>

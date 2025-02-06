@@ -1,6 +1,6 @@
 import React from 'react';
 import ILang from './ILang';
-import parsaPhoto from '../assets/parsa.png'
+import parsaPhoto from '../assets/parsa.webp'
 const About: React.FC<ILang> = ({ lang }) => {
   const content = {
     en: {
