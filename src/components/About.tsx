@@ -42,38 +42,38 @@ const About: React.FC<ILang> = ({ lang }) => {
   const NewLang = content[lang] || content.en;
 
   return (
-    <section id="about" className="py-20">
+    <section id="about" className="py-16">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-8">{NewLang.title}</h2>
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="relative group rounded-full p-10 md:pr-16">
+          <div className="relative group rounded-full  ">
             <img
               src={parsaPhoto}
               alt="Parsa Alavi"
-              className={`w-full object-contain pt-20 rounded-full aspect-square border-t-2 border-white ${NewLang.photoClass ? 'rotate-y-[180deg]' : ''}`}
+              className={`w-full object-contain pt-20 rounded-3xl bg-Pslate-800/50 aspect-square  ${NewLang.photoClass ? 'rotate-y-[180deg]' : ''}`}
             />
-            {/* <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center">
+            {/* <div className="absolute inset-0 bg-Pslate-900/50 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center">
               <p className="text-sm text-center px-4">{NewLang.profileText}</p>
             </div> */}
           </div>
           <div className="space-y-4">
-            <p className="text-slate-400">{NewLang.description1}</p>
-            <p className="text-slate-400">{NewLang.description2}</p>
+            <p className="text-Pslate-400 text-justify">{NewLang.description1}</p>
+            <p className="text-Pslate-400 text-justify">{NewLang.description2}</p>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
-                <p className="text-slate-400">{NewLang.age}</p>
+                <p className="text-Pslate-400">{NewLang.age}</p>
                 <p className="font-medium">{NewLang.values.age}</p>
               </div>
               <div>
-                <p className="text-slate-400">{NewLang.education}</p>
+                <p className="text-Pslate-400">{NewLang.education}</p>
                 <p className="font-medium">{NewLang.values.education}</p>
               </div>
               <div>
-                <p className="text-slate-400">{NewLang.university}</p>
+                <p className="text-Pslate-400">{NewLang.university}</p>
                 <p className="font-medium">{NewLang.values.university}</p>
               </div>
               <div>
-                <p className="text-slate-400">{NewLang.experience}</p>
+                <p className="text-Pslate-400">{NewLang.experience}</p>
                 <p className="font-medium">{NewLang.values.experience}</p>
               </div>
             </div>

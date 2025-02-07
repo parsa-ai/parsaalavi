@@ -40,30 +40,30 @@ const Contact: React.FC<ContactProps> = ({ lang }) => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="bg-slate-800/50 backdrop-blur-xs p-6 rounded-xl">
+            <div className="bg-Pslate-800/50 backdrop-blur-xs p-6 rounded-xl">
               <h3 className="text-xl font-semibold mb-4">{content[lang].contactInfo}</h3>
               <div className="space-y-4">
-                <a href="mailto:parsaalavi9@gmail.com" className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors">
+                <a href="mailto:parsaalavi9@gmail.com" className="flex items-center gap-3 text-Pslate-400 hover:text-Pwhite transition-colors">
                   <Mail className="shrink-0" />
                   <span>Parsaalavi9@gmail.com</span>
                 </a>
-                <a href="tel:+989168432566" className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors">
+                <a href="tel:+989168432566" className="flex items-center gap-3 text-Pslate-400 hover:text-Pwhite transition-colors">
                   <Phone className="shrink-0" />
                   <span dir='ltr'>+98 916 843 2566</span>
                 </a>
               </div>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-xs p-6 rounded-xl">
+            <div className="bg-Pslate-800/50 backdrop-blur-xs p-6 rounded-xl">
               <h3 className="text-xl font-semibold mb-4">{content[lang].socialMedia}</h3>
               <div className="flex gap-4">
-                <a href="https://www.linkedin.com/in/parsa-alavi-7b126a33b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" className="bg-slate-700/50 p-3 rounded-full text-slate-400 hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/parsa-alavi-7b126a33b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" className="bg-Pslate-700/50 p-3 rounded-full text-Pslate-400 hover:text-Pwhite transition-colors">
                   <Linkedin size={24} />
                 </a>
-                <a href="https://instagram.com/parsaalavi.ir" target="_blank" rel="noopener noreferrer" className="bg-slate-700/50 p-3 rounded-full text-slate-400 hover:text-white transition-colors">
+                <a href="https://instagram.com/parsaalavi.ir" target="_blank" rel="noopener noreferrer" className="bg-Pslate-700/50 p-3 rounded-full text-Pslate-400 hover:text-Pwhite transition-colors">
                   <Instagram size={24} />
                 </a>
-                <a href="https://github.com/parsa-ai" target="_blank" rel="noopener noreferrer" className="bg-slate-700/50 p-3 rounded-full text-slate-400 hover:text-white transition-colors">
+                <a href="https://github.com/parsa-ai" target="_blank" rel="noopener noreferrer" className="bg-Pslate-700/50 p-3 rounded-full text-Pslate-400 hover:text-Pwhite transition-colors">
                 <Github size={24} />
                 </a>
               </div>

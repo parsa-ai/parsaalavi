@@ -1,5 +1,35 @@
 @import 'tailwindcss';
 
+:root{
+  --p50:#f8fafc;
+  --p100:#f1f5f9;
+  --p200:#e2e8f0;
+  --p300:#CBD5E1;
+  --p400:#94a3b8;
+  --p500:#64748b;
+  --p600:#475569;
+  --p700:#334155;
+  --p800:#1e293b;
+  --p900:#0f172a;
+  --p950:#020618;
+  --pw:white;
+
+}
+.dark {
+  --p50: #ffffff; 
+  --p100: #f8fafc;
+  --p200: #334155; 
+  --p300: #334155; 
+  --p400: #64748b;
+  --p500: #4b5563; 
+  --p600: #334155; 
+  --p700: #94a3b8; 
+  --p800: #cbd5e1; 
+  --p900: #e2e8f0;  --p950: #f8fafc; 
+  --pw: #0f172a; 
+}
+
+
 @theme {
   --font-sans: Vazir, sans-serif;
   --font-vazir-fa: Vazir;
@@ -7,7 +37,20 @@
   --animate-fade-in: fadeIn 0.6s ease-out forwards;
   --animate-slide-in: slideIn 0.6s ease-out forwards;
   --animate-scale-in: scaleIn 0.6s ease-out forwards;
-
+  
+  --color-Pslate-50:var(--p50);
+  --color-Pslate-100:var(--p100);
+  --color-Pslate-200:var(--p200);
+  --color-Pslate-300:var(--p300);
+  --color-Pslate-400:var(--p400);
+  --color-Pslate-500:var(--p500);
+  --color-Pslate-600:var(--p600);
+  --color-Pslate-700:var(--p700);
+  --color-Pslate-800:var(--p800);
+  --color-Pslate-900:var(--p900);
+  --color-Pslate-950:var(--p950);
+  --color-Pwhite:var(--pw);
+  
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -229,7 +272,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 9rem;
+    bottom: 5rem;
     animation: 1s downbtnA infinite alternate; 
 }
 

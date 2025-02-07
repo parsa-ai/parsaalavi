@@ -10,7 +10,7 @@ const Experience: React.FC<ILang> = ({ lang }) => {
           period: "2024 - Present",
           title: "Programming Instructor",
           company: "Dison",
-          description: ""
+          description: "Teaching various programming topics, including front-end fundamentals, React, Python, and more."
         },
         {
           period: "2024 - Present",
@@ -38,7 +38,7 @@ const Experience: React.FC<ILang> = ({ lang }) => {
       title: "تجربیات",
       experiences: [
         {
-          period: '۱۴۰۳ - اکنون',
+          period: 'اکنون - ۱۴۰۳',
           title: 'مدرس برنامه نویسی',
           company: 'دیسون',
           description: 'تدریس مباحث مختلف برنامه نویسی از جمله مقدمات فرانت اند ، ری اکت ، پایتون و ...'
@@ -72,23 +72,23 @@ const Experience: React.FC<ILang> = ({ lang }) => {
         
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-0 top-0 bottom-0 w-px bg-slate-800"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-px bg-Pslate-800"></div>
 
           {/* Experience Items */}
           <div className="space-y-12">
             {content[lang].experiences.map((exp, index) => (
               <div key={index} className="relative pl-8">
                 {/* Timeline Dot */}
-                <div className="absolute left-0 top-0 w-2 h-2 bg-white rounded-full -translate-x-1/2"></div>
+                <div className="absolute left-0 top-0 w-2 h-2 bg-Pwhite rounded-full -translate-x-1/2"></div>
 
                 {/* Content */}
-                <div className="bg-slate-800/50 backdrop-blur-xs p-6 rounded-xl">
-                  <span className="inline-block bg-slate-700 text-sm px-3 py-1 rounded-full mb-4">
+                <div className="bg-Pslate-800/50 backdrop-blur-xs p-6 rounded-xl">
+                  <span className="inline-block bg-Pslate-700 text-sm px-3 py-1 rounded-full mb-4">
                     {exp.period}
                   </span>
                   <h3 className="text-xl font-semibold mb-2">{exp.title}</h3>
-                  <p className="text-slate-400 mb-2">{exp.company}</p>
-                  <p className="text-slate-300">{exp.description}</p>
+                  <p className="text-Pslate-400 mb-2">{exp.company}</p>
+                  <p className="text-Pslate-300">{exp.description}</p>
                 </div>
               </div>
             ))}

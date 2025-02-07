@@ -55,21 +55,21 @@ const Awards: React.FC<ILang> = ({ lang }) => {
         
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-0 top-0 bottom-0 w-px bg-slate-800"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-px bg-Pslate-800"></div>
 
           {/* Awards Items */}
           <div className="space-y-12">
             {content[lang].awards.map((exp, index) => (
               <div key={index} className="relative pl-8">
                 {/* Timeline Dot */}
-                <div className="absolute left-0 top-0 w-2 h-2 bg-white rounded-full -translate-x-1/2"></div>
+                <div className="absolute left-0 top-0 w-2 h-2 bg-Pwhite rounded-full -translate-x-1/2"></div>
 
                 {/* Content */}
-                <div className="bg-slate-800/50 backdrop-blur-xs p-6 rounded-xl">
+                <div className="bg-Pslate-800/50 backdrop-blur-xs p-6 rounded-xl">
                   <h3 className="text-xl font-semibold mb-2">{exp.title}</h3>
-                  <p className="text-slate-400 mb-2">{exp.company}</p>
-                  <p className="text-slate-300">{exp.description}</p>
-                  <span className="inline-block bg-slate-700 text-sm px-3 py-1 rounded-full mb-4 absolute bottom-0 left-3.5">
+                  <p className="text-Pslate-400 mb-2">{exp.company}</p>
+                  <p className="text-Pslate-300">{exp.description}</p>
+                  <span className="inline-block bg-Pslate-700 text-sm px-3 py-1 rounded-full mb-4 absolute bottom-0 left-3.5">
                      مدرک
                   </span>
                 </div>

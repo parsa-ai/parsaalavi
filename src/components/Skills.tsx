@@ -59,11 +59,11 @@ const Skills: React.FC<ILang> = ({ lang }) => {
                 <div key={skill.name}>
                   <div className="flex justify-between mb-2">
                     <span>{skill.name}</span>
-                    <span className="text-slate-400">{skill.level}</span>
+                    <span className="text-Pslate-400">{skill.level}</span>
                   </div>
-                  <div className="h-2 bg-slate-800 rounded-full">
+                  <div className="h-2 bg-Pslate-800 rounded-full">
                     <div
-                      className="h-full bg-white rounded-full transition-all duration-500"
+                      className="h-full bg-Pwhite rounded-full transition-all duration-500"
                       style={{ width: `${skill.percentage}%` }}
                     ></div>
                   </div>
@@ -79,7 +79,7 @@ const Skills: React.FC<ILang> = ({ lang }) => {
               {content[lang].softSkills.map((skill) => (
                 <div
                   key={skill}
-                  className="bg-slate-800/50 backdrop-blur-xs p-4 rounded-xl text-center hover:bg-slate-700/50 transition-colors"
+                  className="bg-Pslate-800/50 backdrop-blur-xs p-4 rounded-xl text-center hover:bg-Pslate-700/50 transition-colors"
                 >
                   {skill}
                 </div>

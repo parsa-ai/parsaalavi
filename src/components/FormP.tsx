@@ -1,5 +1,5 @@
 import { Send, Loader2, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface ContactProps {
   lang: "en" | "fa";
@@ -41,7 +41,7 @@ const FormP: React.FC<ContactProps> = ({ lang }) => {
   const addNotification = (type: "success" | "error", message: string) => {
     const id = Date.now();
     setNotifications((prev) => [...prev, { id, type, message }]);
-    
+
     setTimeout(() => {
       setNotifications((prev) => prev.filter((n) => n.id !== id));
     }, 10000);
@@ -59,7 +59,7 @@ const FormP: React.FC<ContactProps> = ({ lang }) => {
 
     const botToken = "7551099987:AAEVn3k1BbxAu7UpQx8pHpgsf2fsp57ONeM";
     const chatId = "371097930";
-    
+
     const text = `📩 فرم تماس جدید:\n\n👤 نام: ${name}\n✉️ ایمیل: ${email}\n📌 موضوع: ${subject}\n💬 پیام:\n${message}`;
 
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
@@ -91,9 +91,8 @@ const FormP: React.FC<ContactProps> = ({ lang }) => {
         {notifications.map((notif) => (
           <div
             key={notif.id}
-            className={`flex items-center justify-between gap-2 px-4 py-2 rounded-lg text-white shadow-lg transition-all ${
-              notif.type === "success" ? "bg-green-600" : "bg-red-600"
-            }`}
+            className={`flex items-center justify-between gap-2 px-4 py-2 rounded-lg text-white shadow-lg transition-all ${notif.type === "success" ? "bg-green-600" : "bg-red-600"
+              }`}
           >
             <span>{notif.message}</span>
             <button onClick={() => setNotifications(notifications.filter(n => n.id !== notif.id))}>
@@ -105,7 +104,7 @@ const FormP: React.FC<ContactProps> = ({ lang }) => {
 
       {/* فرم تماس */}
       <form
-        className="bg-slate-800/50 backdrop-blur-xs p-6 rounded-xl space-y-6"
+        className="bg-Pslate-800/50 backdrop-blur-xs p-6 rounded-xl space-y-6"
         onSubmit={handleSubmit}
       >
         <div>
@@ -113,10 +112,12 @@ const FormP: React.FC<ContactProps> = ({ lang }) => {
             {content[lang].name}
           </label>
           <input
+            required
+            placeholder="Enter your name " 
             type="text"
             id="name"
             name="name"
-            className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2 focus:border-white transition-colors"
+            className="w-full bg-Pslate-900/50 placeholder-Pslate-200 border border-Pslate-700 rounded-lg px-4 py-2 focus:border-Pwhite transition-colors"
           />
         </div>
         <div>
@@ -124,10 +125,12 @@ const FormP: React.FC<ContactProps> = ({ lang }) => {
             {content[lang].email}
           </label>
           <input
+            required
+            placeholder="Enter your email  " 
             name="email"
             type="email"
             id="email"
-            className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2 focus:border-white transition-colors"
+            className="w-full bg-Pslate-900/50 placeholder-Pslate-200 border border-Pslate-700 rounded-lg px-4 py-2 focus:border-Pwhite transition-colors"
           />
         </div>
         <div>
@@ -135,10 +138,12 @@ const FormP: React.FC<ContactProps> = ({ lang }) => {
             {content[lang].subject}
           </label>
           <input
+            required
+            placeholder="Enter your subject " 
             name="subject"
             type="text"
             id="subject"
-            className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2 focus:border-white transition-colors"
+            className="w-full bg-Pslate-900/50 placeholder-Pslate-200 border border-Pslate-700 rounded-lg px-4 py-2 focus:border-Pwhite transition-colors"
           />
         </div>
         <div>
@@ -146,10 +151,13 @@ const FormP: React.FC<ContactProps> = ({ lang }) => {
             {content[lang].message}
           </label>
           <textarea
+            required
+            placeholder="Enter your message " 
+
             name="message"
             id="message"
             rows={4}
-            className="w-full min-h-32 max-h-96 bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2 focus:border-white transition-colors"
+            className="w-full min-h-32 max-h-96 placeholder-Pslate-200 bg-Pslate-900/50 border border-Pslate-700 rounded-lg px-4 py-2 focus:border-Pwhite transition-colors"
           ></textarea>
         </div>
 
@@ -157,7 +165,7 @@ const FormP: React.FC<ContactProps> = ({ lang }) => {
         <button
           type="submit"
           disabled={loading}
-          className="w-full inline-flex items-center justify-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-full font-medium hover:bg-slate-200 transition-colors disabled:opacity-50"
+          className="w-full inline-flex items-center justify-center gap-2 bg-Pwhite text-Pslate-900 px-6 py-3 rounded-full font-medium hover:bg-Pslate-200 transition-colors disabled:opacity-50"
         >
           {loading ? (
             <>

@@ -15,7 +15,7 @@ const Hero: React.FC<ILang> = ({ lang }) => {
     fa: {
       greeting: "سلام، من",
       name: "پارسا علوی",
-      title: "توسعه‌دهنده جاوا اسکریپت و مشتقاتش هستم :)",
+      title: "توسعه‌دهنده ری اکت و انگولار",
       viewWork: "دانلود رزومه",
       contact: "تماس با من"
     }
@@ -25,13 +25,13 @@ const Hero: React.FC<ILang> = ({ lang }) => {
     <section id="home" className="min-h-screen flex items-center justify-center py-20 relative">
       <div className="text-center animate-fade-in">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          <span className="text-slate-400 text-5xl">{content[lang].greeting}</span>
+          <span className="text-Pslate-400 text-5xl">{content[lang].greeting}</span>
           <br />
-          <span className="bg-linear-to-r from-white to-slate-400 bg-clip-text text-transparent hover-lift">
+          <span className="bg-linear-to-r from-Pwhite to-Pslate-400 bg-clip-text text-transparent hover-lift">
             {content[lang].name}
           </span>
         </h1>
-        <p className="text-xl md:text-2xl text-slate-400 mb-8 animate-slide-in" style={{ animationDelay: '0.2s' }}>
+        <p className="text-xl md:text-2xl text-Pslate-400 mb-8 animate-slide-in" style={{ animationDelay: '0.2s' }}>
           {content[lang].title}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in" style={{ animationDelay: '0.4s' }}>
@@ -39,14 +39,14 @@ const Hero: React.FC<ILang> = ({ lang }) => {
             href={resumePdf}
             target="_blank"
             download
-            className="button-hover inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-full font-medium hover:bg-slate-200 transition-colors"
+            className="button-hover inline-flex items-center gap-2 bg-Pwhite text-Pslate-900 px-6 py-3 rounded-full font-medium hover:bg-Pslate-200 transition-colors"
           >
             {content[lang].viewWork}
             <ChevronRight size={20} className={lang === 'fa' ? 'rotate-180' : ''} />
           </a>
           <a
             href="#contact"
-            className="button-hover inline-flex items-center gap-2 bg-slate-800 text-white px-6 py-3 rounded-full font-medium hover:bg-slate-700 transition-colors"
+            className="button-hover inline-flex items-center gap-2 bg-Pslate-800 text-Pwhite px-6 py-3 rounded-full font-medium hover:bg-Pslate-700 transition-colors"
           >
             {content[lang].contact}
             <ChevronRight size={20} className={lang === 'fa' ? 'rotate-180' : ''} />

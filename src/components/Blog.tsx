@@ -32,7 +32,7 @@ const Blog = () => {
           {posts.map((post, index) => (
             <article
               key={index}
-              className="group bg-slate-800/50 backdrop-blur-xs rounded-xl overflow-hidden hover:bg-slate-700/50 transition-colors"
+              className="group bg-Pslate-800/50 backdrop-blur-xs rounded-xl overflow-hidden hover:bg-Pslate-700/50 transition-colors"
             >
               <div className="relative aspect-video">
                 <img
@@ -42,12 +42,12 @@ const Blog = () => {
                 />
               </div>
               <div className="p-6">
-                <span className="text-sm text-slate-400">{post.date}</span>
+                <span className="text-sm text-Pslate-400">{post.date}</span>
                 <h3 className="text-xl font-semibold mt-2 mb-3">{post.title}</h3>
-                <p className="text-slate-400 text-sm mb-4">{post.excerpt}</p>
+                <p className="text-Pslate-400 text-sm mb-4">{post.excerpt}</p>
                 <a
                   href="#"
-                  className="inline-flex items-center gap-2 text-sm font-medium hover:text-slate-300 transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-medium hover:text-Pslate-300 transition-colors"
                 >
                   Read More
                   <ArrowRight size={16} />

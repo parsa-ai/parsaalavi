@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Main from "./components/Main";
-import { Loader } from "lucide-react";
+import LoaderP from "./components/loading";
 
 
 function App() {
@@ -11,19 +11,17 @@ function App() {
     if (document.readyState === "complete") {
       handleLoad();
     } else {
-      window.addEventListener("load", handleLoad);
     }
+    window.addEventListener("load", handleLoad);
     return () => {
-      setTimeout(() => {
-        window.removeEventListener("load", handleLoad)
-        window.scrollTo(0, 0);
-      }, 2000);
+      window.scrollTo(0, 0);
+      window.removeEventListener("load", handleLoad)
     }
   }, []);
 
   return (
     <div>
-      {loading && <Loader />}
+      {loading && <LoaderP />}
       <Main />
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect  } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import ILang from "./ILang";
 import ai from "../assets/ai-lab.webp";
@@ -37,18 +37,18 @@ const Portfolio: React.FC<ILang> = ({ lang }) => {
           link: "https://ai-lab.liara.run/"
         },
         {
-          title: "Makan Ba Ma",
-          description: "An online hotel booking website.",
-          image: makanbama,
-          technologies: ["JavaScript", "HTML", "CSS"],
-          link: "https://parsa-ai.github.io/makanbama/"
-        },
-        {
           title: "Sepan Vet",
           description: "Designed an e-commerce website using WordPress and Elementor.",
           image: sepan,
           technologies: ["WordPress", "Elementor"],
           link: "https://sepanvet.com/"
+        },
+        {
+          title: "Makan Ba Ma",
+          description: "An online hotel booking website.",
+          image: makanbama,
+          technologies: ["JavaScript", "HTML", "CSS"],
+          link: "https://parsa-ai.github.io/makanbama/"
         },
         {
           title: "Parsa Store",
@@ -71,13 +71,6 @@ const Portfolio: React.FC<ILang> = ({ lang }) => {
       title: 'نمونه کارها',
       viewProject: 'مشاهده پروژه',
       projects: [
-        {
-          title: 'پارک علم و فناوری خوزستان',
-          description: 'طراحی بخشی از تم سایت با استفاده از Php و Tailwind ',
-          image: park ,
-          technologies: ['Php', 'Wordpress', 'Tailwind CSS'],
-          link: 'https://khstp.ir/'
-        },
 
         {
           title: 'نیما عسگری',
@@ -86,6 +79,14 @@ const Portfolio: React.FC<ILang> = ({ lang }) => {
           technologies: ['NextJs', 'Tailwind'],
           link: 'https://parsa-ai.github.io/Asgari/'
         },
+        
+        {
+          title: 'پارک علم و فناوری خوزستان',
+          description: 'طراحی بخشی از تم سایت با استفاده از Php و Tailwind ',
+          image: park ,
+          technologies: ['Php', 'Wordpress', 'Tailwind CSS'],
+          link: 'https://khstp.ir/'
+        },
         {
           title: 'مقالات هوش مصنوعی',
           description: 'پیاده سازی یک پروژه دانشگاهی با react و Tailwind و ts با موضوع هوش مصنوعی',
@@ -93,13 +94,7 @@ const Portfolio: React.FC<ILang> = ({ lang }) => {
           technologies: ['React', 'TypeScript', 'Tailwind CSS'],
           link: 'https://ai-lab.liara.run/'
         },
-        {
-          title: 'مکان با ما',
-          description: 'سایت رزرو هتل انلاین',
-          image: makanbama,
-          technologies: ['Js', 'Html', 'CSS'],
-          link: 'https://parsa-ai.github.io/makanbama/'
-        },
+        
         
         {
           title: 'سپن وت',
@@ -107,6 +102,14 @@ const Portfolio: React.FC<ILang> = ({ lang }) => {
           image: sepan,
           technologies: ['Wordpress', 'Elementor'],
           link: 'https://sepanvet.com/'
+        },
+
+        {
+          title: 'مکان با ما',
+          description: 'سایت رزرو هتل انلاین',
+          image: makanbama,
+          technologies: ['Js', 'Html', 'CSS'],
+          link: 'https://parsa-ai.github.io/makanbama/'
         },
         {
           title: 'پارسا استور',
@@ -127,14 +130,26 @@ const Portfolio: React.FC<ILang> = ({ lang }) => {
   };
 
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [isHovered, setIsHovered] = useState(false);
   const nextProject = () => {
     setCurrentIndex((prev) => (prev + 1) % content[lang].projects.length);
   };
-
+  
   const prevProject = () => {
     setCurrentIndex((prev) => (prev - 1 + content[lang].projects.length) % content[lang].projects.length);
   };
+  
+  useEffect(() => {
+    if (!isHovered) {
+    const interval = setInterval(() => {
+      nextProject();
+    }, 3000); 
+  
+    return () => clearInterval(interval);
+  }
+  }, [currentIndex  , isHovered]); 
+  
+  
 
   return (
     <section id="portfolio" className="py-20">
@@ -152,20 +167,21 @@ const Portfolio: React.FC<ILang> = ({ lang }) => {
               }}
             >
               {content[lang].projects.map((project, index) => (
-                <div key={index} className="w-full shrink-0">
+                <div key={index} className="w-full shrink-0"  onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}>
                   <a className="relative group" href={project.link} target='_blank'>
                     <img src={project.image} alt={project.title} className="w-full aspect-video object-cover" />
-                    <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8">
+                    <div className="absolute inset-0 bg-Pslate-900/80 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8">
                       <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-                      <p className="text-slate-300 text-center mb-4">{project.description}</p>
+                      <p className="text-Pslate-300 text-center mb-4">{project.description}</p>
                       <div className="flex gap-2 mb-6">
                         {project.technologies.map((tech) => (
-                          <span key={tech} className="bg-slate-700/50 px-3 py-1 rounded-full text-sm">
+                          <span key={tech} className="bg-Pslate-700/50 px-3 py-1 rounded-full text-sm">
                             {tech}
                           </span>
                         ))}
                       </div>
-                      <a target='_blank' href={project.link} className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-2 rounded-full hover:bg-slate-200 transition-colors">
+                      <a target='_blank' href={project.link} className="inline-flex items-center gap-2 bg-Pwhite text-Pslate-900 px-6 py-2 rounded-full hover:bg-Pslate-200 transition-colors">
                         {content[lang].viewProject}
                         <ExternalLink size={16} />
                       </a>
@@ -178,13 +194,13 @@ const Portfolio: React.FC<ILang> = ({ lang }) => {
 
           <button
             onClick={lang === 'fa' ? nextProject : prevProject}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-slate-900 p-2 rounded-full hover:bg-slate-200 transition-colors"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-Pwhite text-Pslate-900 p-2 rounded-full hover:bg-Pslate-200 transition-colors"
           >
             <ChevronLeft size={24} />
           </button>
           <button
             onClick={lang === 'fa' ? prevProject : nextProject}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-slate-900 p-2 rounded-full hover:bg-slate-200 transition-colors"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-Pwhite text-Pslate-900 p-2 rounded-full hover:bg-Pslate-200 transition-colors"
           >
             <ChevronRight size={24} />
           </button>
