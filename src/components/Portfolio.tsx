@@ -152,9 +152,9 @@ const Portfolio: React.FC<ILang> = ({ lang }) => {
   
 
   return (
-    <section id="portfolio" className="py-20">
+    <section id="portfolio" className="py-10">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8">{content[lang].title}</h2>
+        <h2 className="text-3xl font-bold mb-8 xTxt">{content[lang].title}</h2>
 
         <div className="relative">
           <div className="overflow-hidden rounded-2xl">
@@ -181,10 +181,10 @@ const Portfolio: React.FC<ILang> = ({ lang }) => {
                           </span>
                         ))}
                       </div>
-                      <a target='_blank' href={project.link} className="inline-flex items-center gap-2 bg-Pwhite text-Pslate-900 px-6 py-2 rounded-full hover:bg-Pslate-200 transition-colors">
+                      <span className="inline-flex items-center gap-2 bg-Pwhite text-Pslate-900 px-6 py-2 rounded-full hover:bg-Pslate-200 transition-colors">
                         {content[lang].viewProject}
                         <ExternalLink size={16} />
-                      </a>
+                      </span>
                     </div>
                   </a>
                 </div>

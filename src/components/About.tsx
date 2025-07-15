@@ -42,9 +42,9 @@ const About: React.FC<ILang> = ({ lang }) => {
   const NewLang = content[lang] || content.en;
 
   return (
-    <section id="about" className="py-16">
+    <section id="about" className="py-10">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8">{NewLang.title}</h2>
+        <h2 className="text-3xl font-bold mb-8 xTxt">{NewLang.title}</h2>
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="relative group rounded-full  ">
             <img

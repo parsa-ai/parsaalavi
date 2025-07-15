@@ -284,3 +284,26 @@ body {
     translate: 0 10px;
   }
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.xTxt{
+  display: inline-block;
+  position: relative;
+}
+.xTxt::after{
+  @apply bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-700;
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+}

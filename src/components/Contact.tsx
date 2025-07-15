@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, Phone, Linkedin, Instagram, Github } from 'lucide-react';
-import FormP from './formP';
+import FormP from './FormP';
 
 interface ContactProps {
   lang: 'en' | 'fa';
@@ -33,9 +33,9 @@ const Contact: React.FC<ContactProps> = ({ lang }) => {
   
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-10">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">{content[lang].title}</h2>
+        <h2 className="text-3xl font-bold mb-12 xTxt">{content[lang].title}</h2>
         
         <div className="grid md:grid-cols-2 gap-8">
           {/* Contact Information */}

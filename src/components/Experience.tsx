@@ -66,9 +66,9 @@ const Experience: React.FC<ILang> = ({ lang }) => {
   };
 
   return (
-    <section id="experience" className={`py-20 ${lang === 'fa' ? 'rtl' : 'ltr'}`}>
+    <section id="experience" className={`py-10 ${lang === 'fa' ? 'rtl' : 'ltr'}`}>
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8">{content[lang].title}</h2>
+        <h2 className="text-3xl font-bold mb-8 xTxt">{content[lang].title}</h2>
         
         <div className="relative">
           {/* Timeline Line */}

@@ -22,7 +22,7 @@ const Hero: React.FC<ILang> = ({ lang }) => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center py-20 relative">
+    <section id="home" className="min-h-screen flex items-center justify-center py-10 relative">
       <div className="text-center animate-fade-in">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
           <span className="text-Pslate-400 text-5xl">{content[lang].greeting}</span>
@@ -39,14 +39,14 @@ const Hero: React.FC<ILang> = ({ lang }) => {
             href={resumePdf}
             target="_blank"
             download
-            className="button-hover inline-flex items-center gap-2 bg-Pwhite text-Pslate-900 px-6 py-3 rounded-full font-medium hover:bg-Pslate-200 transition-colors"
+            className="button-hover inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-700 text-white  px-6 py-3  rounded-full font-medium  transition-colors"
           >
             {content[lang].viewWork}
             <ChevronRight size={20} className={lang === 'fa' ? 'rotate-180' : ''} />
           </a>
           <a
             href="#contact"
-            className="button-hover inline-flex items-center gap-2 bg-Pslate-800 text-Pwhite px-6 py-3 rounded-full font-medium hover:bg-Pslate-700 transition-colors"
+            className="button-hover inline-flex items-center justify-center gap-2 bg-Pslate-800 text-Pwhite px-6 py-3 rounded-full font-medium hover:bg-Pslate-700 transition-colors"
           >
             {content[lang].contact}
             <ChevronRight size={20} className={lang === 'fa' ? 'rotate-180' : ''} />
