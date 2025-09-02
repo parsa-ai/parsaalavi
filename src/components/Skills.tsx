@@ -16,10 +16,10 @@ const Skills: React.FC<ILang> = ({ lang }) => {
       softTitle: 'Soft Skills',
       technicalSkills: [
         { name: 'React js', level: 'Advanced', percentage: 90 },
-        { name: 'Angular', level: 'Intermediate', percentage: 75 },
-        { name: 'Next.js', level: 'Intermediate', percentage: 60 },
+        { name: 'Next.js', level: 'Intermediate', percentage: 70 },
+        { name: 'Angular', level: 'Intermediate', percentage: 40 },
         { name: 'Php (WordPress)', level: 'Advanced', percentage: 85 },
-        { name: 'Python', level: 'Advanced', percentage: 90 },
+        { name: 'Python', level: 'Intermediate', percentage: 40 },
       ],
       softSkills: [
         'Creativity',
@@ -36,10 +36,10 @@ const Skills: React.FC<ILang> = ({ lang }) => {
       softTitle: 'مهارت‌های نرم',
       technicalSkills: [
         { name: 'React js', level: 'پیشرفته', percentage: 90 },
-        { name: 'Angular', level: 'متوسط', percentage: 75 },
-        { name: 'Next.js', level: 'متوسط', percentage: 60 },
+        { name: 'Next.js', level: 'متوسط', percentage: 70 },
+        { name: 'Angular', level: 'متوسط', percentage: 40 },
         { name: 'Php (WordPress)', level: 'پیشرفته', percentage: 85 },
-        { name: 'Python', level: 'پیشرفته', percentage: 90 },
+        { name: 'Python', level: 'متوسط', percentage: 40 },
       ],
       softSkills: [
         'خلاقیت',
@@ -236,6 +236,7 @@ const AutoScroller = ({ skills }: AutoScrollerProps) => {
 
   return (
     <div
+    dir='ltr'
       ref={scrollRef}
       className="mt-15 h-13  flex items-center w-full overflow-hidden select-none"
       onMouseEnter={handleMouseEnter}
