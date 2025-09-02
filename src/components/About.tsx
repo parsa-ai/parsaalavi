@@ -5,7 +5,7 @@ const About: React.FC<ILang> = ({ lang }) => {
   const content = {
     en: {
       title: 'About Me',
-      description1: `Hi! I'm Parsa, an 19-year-old front-end developer with 3 years of experience in creating beautiful and functional web experiences. Currently studying Computer Engineering at Chamran University, I combine my academic knowledge with practical expertise in Angular, React, Next.js, and WordPress.`,
+      description1: `Hi! I'm Parsa, an 20-year-old front-end developer with 3 years of experience in creating beautiful and functional web experiences. Currently studying Computer Engineering at Chamran University, I combine my academic knowledge with practical expertise in React, Next.js, Angular and WordPress.`,
       description2: `I'm passionate about learning new technologies and sharing knowledge with others. My experience includes working on various projects, from small business websites to complex web applications. I believe in the power of teamwork and continuous improvement.`,
       age: 'Age:',
       photoClass:true,
@@ -13,16 +13,16 @@ const About: React.FC<ILang> = ({ lang }) => {
       university: 'University:',
       experience: 'Experience:',
       values: {
-        age: '19',
+        age: '20',
         education: 'Computer Engineering',
         university: 'Chamran University',
-        experience: '2 Years',
+        experience: '3 Years',
       },
       // profileText: 'Parsa Alavi'
     },
     fa: {
       title: 'درباره من',
-      description1: `سلام! من پارسا هستم، یک توسعه‌دهنده فرانت‌اند ۱۹ ساله با ۲ سال تجربه در ایجاد صفحات وب و توسعه فرانت اند . در حال حاضر در دانشگاه چمران مهندسی کامپیوتر می‌خوانم و دانش آکادمیک خود را با تخصص عملی در  ری‌اکت، انگولار، نکست.جی‌اس و وردپرس ترکیب می‌کنم.`,
+      description1: `سلام! من پارسا هستم، یک توسعه‌دهنده فرانت‌اند ۲۰ ساله با ۳ سال تجربه در ایجاد صفحات وب و توسعه فرانت اند . در حال حاضر در دانشگاه چمران مهندسی کامپیوتر می‌خوانم و دانش آکادمیک خود را با تخصص عملی در  ری‌اکت، انگولار، نکست.جی‌اس و وردپرس ترکیب می‌کنم.`,
       description2: `من به یادگیری فناوری‌های جدید و اشتراک‌گذاری دانش با دیگران علاقه‌مندم. تجربه من شامل کار بر روی پروژه‌های مختلف، از وب‌سایت‌های کسب‌وکار کوچک تا برنامه‌های وب پیچیده است. من به قدرت کار تیمی و بهبود مستمر اعتقاد دارم.`,
       age: 'سن:',
       photoClass:false,
@@ -30,10 +30,10 @@ const About: React.FC<ILang> = ({ lang }) => {
       university: 'دانشگاه:',
       experience: 'تجربه:',
       values: {
-        age: '۱۹',
+        age: '۲۰',
         education: 'مهندسی کامپیوتر',
         university: 'دانشگاه چمران',
-        experience: '۲ سال'
+        experience: '۳ سال'
       },
       // profileText: 'پارسا علوی'
     }
@@ -50,7 +50,7 @@ const About: React.FC<ILang> = ({ lang }) => {
             <img
               src={parsaPhoto}
               alt="Parsa Alavi"
-              className={`w-full object-contain pt-20 rounded-3xl bg-Pslate-800/50 aspect-square  ${NewLang.photoClass ? 'rotate-y-[180deg]' : ''}`}
+              className={`w-full object-cover  rounded-3xl bg-Pslate-800/50 aspect-square  ${NewLang.photoClass ? 'rotate-y-[180deg]' : ''}`}
             />
             {/* <div className="absolute inset-0 bg-Pslate-900/50 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center">
               <p className="text-sm text-center px-4">{NewLang.profileText}</p>
