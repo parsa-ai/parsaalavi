@@ -8,12 +8,18 @@ const Experience: React.FC<ILang> = ({ lang }) => {
       experiences: [
         {
           period: "2024 - Present",
+          title: "Software Engineer",
+          company: "Mazid holding",
+          description: "Developing custom, high performance UI designs using React.js, Next.js, Three.js, and Framer Motion."
+        },
+        {
+          period: "2024 - 2025",
           title: "Programming Instructor",
           company: "Dison",
           description: "Teaching various programming topics, including front-end fundamentals, React, Python, and more."
         },
         {
-          period: "2024 - Present",
+          period: "2024 - 2025",
           title: "Software Engineer",
           company: "FARAZ E-COMMERCE",
           description: "Developing custom WordPress themes and plugins for various clients using PHP and React.js."
@@ -38,13 +44,19 @@ const Experience: React.FC<ILang> = ({ lang }) => {
       title: "تجربیات",
       experiences: [
         {
-          period: 'اکنون - ۱۴۰۳',
+          period: '۱۴۰۴ - اکنون',
+          title: 'مهندس نرم افزار',
+          company: 'هولدینگ مزید',
+          description: 'ایجاد رابط‌های کاربری سفارشی و با عملکرد بالا با استفاده از React.js، Next.js، Three.js و Framer Motion.'
+        },
+        {
+          period: '۱۴۰۴ - ۱۴۰۳',
           title: 'مدرس برنامه نویسی',
           company: 'دیسون',
           description: 'تدریس مباحث مختلف برنامه نویسی از جمله مقدمات فرانت اند ، ری اکت ، پایتون و ...'
         },
         {
-          period: 'اکنون - ۱۴۰۳',
+          period: '۱۴۰۴ - ۱۴۰۳',
           title: 'مهندس نرم افزار',
           company: 'تجارت الکترونیک فراز',
           description: 'توسعه تم‌ها و افزونه‌های سفارشی وردپرس برای مشتریان مختلف با php و react js.'
