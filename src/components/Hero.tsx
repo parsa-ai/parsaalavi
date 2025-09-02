@@ -1,21 +1,21 @@
 import React from 'react';
 import { ChevronRight , ArrowDown} from 'lucide-react';
 import  ILang  from "./ILang";
-import resumePdf from '../assets/resume.pdf'
+
 
 const Hero: React.FC<ILang> = ({ lang }) => {
   const content = {
     en: {
       greeting: "Hello, I'm",
       name: "Parsa Alavi",
-      title: "React js & Angular Developer",
+      title: "React & Next Developer",
       viewWork: "Download Resume",
       contact: "Contact Me"
     },
     fa: {
       greeting: "سلام، من",
-      name: "پارسا علوی",
-      title: "توسعه‌دهنده ری اکت و انگولار",
+      name: "پارسا علوی هستم",
+      title: "توسعه‌دهنده ری اکت و نکست",
       viewWork: "دانلود رزومه",
       contact: "تماس با من"
     }
@@ -36,10 +36,10 @@ const Hero: React.FC<ILang> = ({ lang }) => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in" style={{ animationDelay: '0.4s' }}>
           <a
-            href={resumePdf}
+            href={'/parsaalavi.pdf'}
             target="_blank"
             download
-            className="button-hover inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-700 text-white  px-6 py-3  rounded-full font-medium  transition-colors"
+            className="noise button-hover inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-700 text-white  px-6 py-3  rounded-full font-medium  transition-colors"
           >
             {content[lang].viewWork}
             <ChevronRight size={20} className={lang === 'fa' ? 'rotate-180' : ''} />
